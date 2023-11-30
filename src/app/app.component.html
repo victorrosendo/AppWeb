@@ -1,0 +1,10 @@
+<div class="topnav" [ngClass]="{'responsive': isResponsive}">
+    <a href="home" class="active">Home</a>
+    <a href="login">News</a>
+    <a href="formularios">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" (click)="toggleMenu()">&#9776;</a>
+  </div>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,33 @@
+<div class="container mt-3">
+    <h2>Lista de Personas</h2>
+    <hr>
+
+    <div *ngIf="personas && personas.length > 0; else noData">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let persona of personas">
+                    <td>{{ persona.id }}</td>
+                    <td>{{ persona.nombre }}</td>
+                    <td>{{ persona.edad }}</td>
+                    <td><button (click)="modificar(persona)">Modificar</button>
+                        <button (click)="eliminar(persona)">Eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <ng-template #noData>
+        <p>No hay datos disponibles.</p>
+    </ng-template>
+<button (click)="addPerson()">Agregar</button>
+    
+    
+</div> 
