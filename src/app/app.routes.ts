@@ -15,5 +15,5 @@ export const routes: Routes = [
     { path: 'pruebas-unitarias', component: PruebasUnitariasComponent },
     { path: 'lista-personas', component: ListaPersonasComponent },
     //con ester pat se indica cual es la primera página que se debe iniciar junto con la app
-    { path: '', redirectTo: 'lista-personas' },
+    { path: '**', redirectTo: 'lista-personas' },
 ];
